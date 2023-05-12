@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <script type="text/javascript" src="./simple-jsonrpc-js.js"></script>
+        <script type="text/javascript" src="./freemaster-client.js"></script>
+    </head>
+    <body onload="main()">
+
+
+        <h1>My first json rpc  dashboard</h1>
+        var16: <span id="span_var16">??</span> <br><br>
+
+        var16inc: <input id="input_var16inc" value="1" type="text" size="10">
+        <input type="button" value="write!" onclick="writevar()"> 
+        <span id="span_status" ></span><br>
+
+        <br> <br> <br> <br><hr>
+        <div class="footer">
+            copyright 2020 nxp
+        </div>
+
+<script language="JavaScript">
+            var s_var16;
+            var i_var16inc;
+            var s_status;
+
+            function main()
+            {
+                s_var16=document.getElementById("span_var16");
+                i_var16inc=document.getElementById("input_var16inc");
+                s_status=document.getElementById("span_status");
+
+                pcm=new PCM("localhost:41000", on_connected, on_error, on_error);
+                pcm.OnServerError = on_error;
+                pcm.OnSocketError = on_error;
+
+            }
+            function on_error(err)
+            {
+                console.log(err);
+            }
+            function on_connected()
+            {
+                setInterval(timer,500);
+            }
+            function timer()
+            {
+                pcm.ReadVariable("var16")
+                .then((response) => s_var16.innerText = response.data)
+                .catch((err) => s_var16.innerText = "ERROR:" + JSON.stringify(err))
+            
+            }
+            function writevar()
+            {
+                var v = i_var16inc.value;
+                pcm.writeVariable("var16inc",v)
+                .then((response) => s_status.innerText = "written"+v)
+                .catch((err) => s_status.innerText="ERROR:" +  JSON.stringify(err))
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title> freeemaster dashboard</title>
+
+    </head>
+    
+    <body >
+        <header>
+            <h2><a href="#" class="logo"> sochsolar team </a></h2>
+            <ul>
+                <li><a href="gui.html" > home</a></li>
+                <li><a href="introduction.html"> introduction</a></li>
+                <li><a href="control structure.html" class="active">  control structure</a></li>
+                <li><a href="app control.html"> app control </a></li>
+                <li><a href="#"> motor identifier</a></li>
+                <li><a href="#"> parameters </a></li>
+                <li><a href="#"> current loop</a></li>
+                <li><a href="#"> speed&position</a></li> 
+                <li><a href="#"> Sensors</a></li>
+                <li><a href="#"> sensorless</a></li>
+             
+                <li><a href="#"> output file</a></li>
+              
+            </ul>
+        </header>
+        
+
+        <h1>application control structure</h1>
+        
+
+
+        <h3>scaler control</h3>
+        V/Hz_factor <input id="V/Hz_factor" value="100" type="text" size="10">  [%]  <br>
+        Uq_req <input id="Uq_req" value="0" type="text" size="10">  [V]  <br>
+        Freq_req <input id="Freq_req" value="0" type="text" size="10">  [A]  <br> <br> <br>
+        
+        
+        <h3>Voltage FOC</h3>
+        Ud_req <input id="Ud_req" value="0" type="text" size="10">  [V]  <br>
+        Uq_req <input id="Uq_req" value="0" type="text" size="10">  [V]  <br> <br><br>
+
+
+
+
+        <h3>current FOC</h3>
+         id_req <input id="input_id_req" value="0" type="text" size="10">  [A]  <br>      
+
+        iq_req: <input id="input_iq_req" value="0" type="text" size="10"> [A]    <br>  <br><br>  
+        
+    
+        <h3>speed FOC</h3>
+        speed_req: <input id="input_speed_req" value="0" type="text" size="10"> [rpm]<br><br>  <br>     
+
+        <h3>position & speed feedback</h3>
+        sensor type <input id="sensor_type" value="sensor" type="text" size="10"> <br><br>  <br> 
+
+    
+
+        <br> <br> <br> <br><hr>
+
+
+    </body>
+</html>
+
+

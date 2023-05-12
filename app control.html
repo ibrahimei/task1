@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style_app_control.css">
+        <title> freeemaster dashboard</title>
+
+    </head>
+    
+    <body >
+        <header>
+            <h2><a href="#" class="logo"> sochsolar team </a></h2>
+            <ul>
+                <li><a href="gui.html" > home</a></li>
+                <li><a href="introduction.html"> introduction</a></li>
+                <li><a href="control structure.html">  control structure</a></li>
+                <li><a href="app control.html" class="active"> app control </a></li>
+                <li><a href="#"> motor identifier</a></li>
+                <li><a href="#"> parameters </a></li>
+                <li><a href="#"> current loop</a></li>
+                <li><a href="#"> speed&position</a></li> 
+                <li><a href="#"> Sensors</a></li>
+                <li><a href="#"> sensorless</a></li>
+               
+                <li><a href="#"> output file</a></li>
+                
+            </ul>
+        </header>
+        <div class="speedometer-container">
+            <div class="speedometer-text">
+                <div class="static">speed</div>
+                <div class="dynamic">
+                    <span class="km">0</span>
+                    <span class="unit">rpm</span>
+                </div>
+            </div>
+            <div class="center-point"></div>
+            <div class="speedometer-center-hide"></div>
+            <div class="speedometer-bottom-hide"></div>
+    
+            <div class="arrow-container">
+                <div class="arrow-wrapper speed-0">
+                    <div class="arrow"></div>
+                
+                </div>
+            </div>
+            <div class="speedometer-scale speedometer-scale-1 active"></div>
+            <div class="speedometer-scale speedometer-scale-2"></div>
+            <div class="speedometer-scale speedometer-scale-3"></div>
+            <div class="speedometer-scale speedometer-scale-4"></div>
+            <div class="speedometer-scale speedometer-scale-5"></div>
+            <div class="speedometer-scale speedometer-scale-6"></div>
+            <div class="speedometer-scale speedometer-scale-7"></div>
+            <div class="speedometer-scale speedometer-scale-8"></div>
+            <div class="speedometer-scale speedometer-scale-9"></div>
+            <div class="speedometer-scale speedometer-scale-10"></div>
+            <div class="speedometer-scale speedometer-scale-11"></div>
+            <div class="speedometer-scale speedometer-scale-12"></div>
+            <div class="speedometer-scale speedometer-scale-13"></div>
+            <div class="speedometer-scale speedometer-scale-14"></div>
+            <div class="speedometer-scale speedometer-scale-15"></div>
+            <div class="speedometer-scale speedometer-scale-16"></div>
+            <div class="speedometer-scale speedometer-scale-17"></div>
+            <div class="speedometer-scale speedometer-scale-18"></div>
+            <div class="speedometer-scale speedometer-scale-19"></div>
+
+        </div>
+        <div class="accelerate-container">
+            <button class="increase" onclick="increaseSpeed()">Increase Speed</button>
+            <button class="decrease" onclick="decreaseSpeed()">Decrease Speed</button>
+        </div>
+        <script src="speed-changer.js"></script>
+
+
+    </body>
+</html>
